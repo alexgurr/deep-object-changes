@@ -1,4 +1,4 @@
 node_modules/
-index.test.js
 .babelrc
 coverage/
+src/
