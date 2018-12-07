@@ -1,0 +1,32 @@
+{
+  "name": "deep-object-changes",
+  "version": "1.0.0",
+  "description": "Compares two objects, an original and an updated version and returns an object with only the changes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexgurr/deep-object-changes.git"
+  },
+  "keywords": [
+    "compare",
+    "objects",
+    "deep",
+    "changes"
+  ],
+  "author": "alexgurr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexgurr/deep-object-changes/issues"
+  },
+  "homepage": "https://github.com/alexgurr/deep-object-changes#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "jest": "^23.6.0"
+  }
+}

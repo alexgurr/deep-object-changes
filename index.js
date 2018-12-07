@@ -14,7 +14,7 @@ export default function getDeepObjectChanges(original, withChanges) {
     const value = withChanges[key];
 
     if (typeof value === 'object' && !Array.isArray(value)) {
-      const newValue = getObjectsDeepDiff(original[key], value);
+      const newValue = getDeepObjectChanges(original[key], value);
 
       if (!Object.keys(newValue).length) { return finalPayload; }
 
@@ -25,5 +25,3 @@ export default function getDeepObjectChanges(original, withChanges) {
   }, {});
 }
 
-/** For node/ES5 **/
-module.exports = getDeepObjectChanges;
