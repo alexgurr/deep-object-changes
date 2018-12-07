@@ -1,5 +1,5 @@
 # deep-object-changes
-![npm](https://nodei.co/npm/deep-object-changes.png?compact=true) ![issues](https://img.shields.io/github/issues/alexgurr/deep-object-changes.svg) ![stars](https://img.shields.io/github/stars/alexgurr/deep-object-changes.svg)
+[![npm](https://nodei.co/npm/deep-object-changes.png?compact=true)](https://www.npmjs.com/package/deep-object-changes) ![issues](https://img.shields.io/github/issues/alexgurr/deep-object-changes.svg) ![stars](https://img.shields.io/github/stars/alexgurr/deep-object-changes.svg)
 
 Compares two objects, an original and an updated version and returns an object with only the changes.
 
