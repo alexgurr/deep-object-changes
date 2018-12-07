@@ -1,9 +1,13 @@
 # deep-object-changes
+[![npm](https://nodei.co/npm/deep-object-changes.png?compact=true)](https://www.npmjs.com/package/deep-object-changes) ![size](https://badgen.net/bundlephobia/minzip/deep-object-changes) ![issues](https://img.shields.io/github/issues/alexgurr/deep-object-changes.svg) ![stars](https://img.shields.io/github/stars/alexgurr/deep-object-changes.svg)
+
 Compares two objects, an original and an updated version and returns an object with only the changes.
 
 Will deep compare objects recursively, but will only shallow compare arrays.
 
 This module is useful for working out the bare minimum payload needed to send to a server.
+
+Only ~500b un-minified and 200b minified.
 
 ## Example
 
