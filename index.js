@@ -24,3 +24,6 @@ export default function getDeepObjectChanges(original, withChanges) {
     return { ...finalPayload, [key]: value };
   }, {});
 }
+
+/** For node/ES5 **/
+module.exports = getDeepObjectChanges;
