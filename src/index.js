@@ -8,6 +8,8 @@
  * @return {Object}
  */
 export default function getDeepObjectChanges(original, withChanges) {
+  if (!original) { return withChanges; }
+
   return Object.keys(withChanges).reduce((finalPayload, key) => {
     if (withChanges[key] === original[key]) { return finalPayload; }
 

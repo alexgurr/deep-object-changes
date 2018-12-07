@@ -27,6 +27,24 @@ describe('common/utils/getDeepObjectChanges', () => {
     expect(getDeepObjectChanges(MOCK_PAYLOAD, CHANGES)).toEqual({ bar: 'foobar' });
   });
 
+  test('should handle object changes', () => {
+    const MOCK_PAYLOAD = {
+      foo: 'bar',
+      bar: 'foo'
+    };
+
+    const CHANGES = {
+      foo: 'bar',
+      bar: 'foobar',
+      foobar: { foo: 'bar' }
+    };
+
+    expect(getDeepObjectChanges(MOCK_PAYLOAD, CHANGES)).toEqual({
+      bar: 'foobar',
+      foobar: { foo: 'bar' }
+    });
+  });
+
   test('should handle nested objects', () => {
     const MOCK_PAYLOAD = {
       foo: 'bar',
