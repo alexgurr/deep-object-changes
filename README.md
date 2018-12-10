@@ -7,8 +7,6 @@ Will deep compare objects recursively, but will only shallow compare arrays.
 
 This module is useful for working out the bare minimum payload needed to send to a server.
 
-Only ~500b un-minified and 200b minified.
-
 ## Example
 
 ```
