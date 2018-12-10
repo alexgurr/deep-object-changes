@@ -21,6 +21,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
  * @return {Object}
  */
 function getDeepObjectChanges(original, withChanges) {
+  if (!original) {
+    return withChanges;
+  }
+
   return Object.keys(withChanges).reduce(function (finalPayload, key) {
     if (withChanges[key] === original[key]) {
       return finalPayload;
