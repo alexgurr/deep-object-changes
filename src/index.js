@@ -12,18 +12,17 @@ export default function getDeepObjectChanges(original, withChanges) {
 
   return Object.keys(withChanges).reduce((finalPayload, key) => {
     if (withChanges[key] === original[key]) { return finalPayload; }
-
+    
     const value = withChanges[key];
 
-    if (typeof value === 'object' && !Array.isArray(value)) {
+    if (value && typeof value === 'object' && !Array.isArray(value)) {
       const newValue = getDeepObjectChanges(original[key], value);
 
-      if (!Object.keys(newValue).length) { return finalPayload; }
-
-      return { ...finalPayload, [key]: newValue };
+      return !Object.keys(newValue).length 
+        ? finalPayload 
+        : { ...finalPayload, [key]: newValue };
     }
 
     return { ...finalPayload, [key]: value };
   }, {});
 }
-

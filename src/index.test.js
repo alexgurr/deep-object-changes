@@ -80,5 +80,17 @@ describe('common/utils/getDeepObjectChanges', () => {
       }
     });
   });
+
+  test('should handle null', () => {
+    const MOCK_PAYLOAD = {
+      foo: { bar: 'bar' }
+    };
+
+    const CHANGES = {
+      foo: null
+    };
+
+    expect(getDeepObjectChanges(MOCK_PAYLOAD, CHANGES)).toEqual({ foo: null });
+  });
 });
 
